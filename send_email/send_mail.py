@@ -15,6 +15,8 @@ def send_mail(attachment_name):
 
     message = MIMEMultipart()
     message['Subject'] = Header("api-offer rpc statis", 'utf-8')
+    message['From'] = sender
+    message['To'] = ','.join(receivers)
     
      # 添加邮件正文内容
     message.attach(MIMEText("the data is in the attachment", 'plain', 'utf-8'))
