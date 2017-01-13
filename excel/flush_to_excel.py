@@ -16,9 +16,10 @@ def flush_to_excel(excel_path, headers, contents):
     ef = Workbook(excel_name)
     sheet = ef.add_worksheet("sheet1")
 
+   # 写入headers
     for index, t in enumerate(headers):
         sheet.write(0, index, t)
-
+    # 写入内容
     for row_index, l in enumerate(contents):
         for column_index, o in enumerate(l):
             sheet.write(row_index + 1, column_index, o)
