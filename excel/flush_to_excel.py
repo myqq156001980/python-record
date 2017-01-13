@@ -3,6 +3,7 @@ import os
 
 def flush_to_excel(excel_path, headers, contents):
     """
+    flush_to_excel(excel_path, headers, contents)
     excel_path: type->string
     headers: type->list,
     content: type->list[list]
