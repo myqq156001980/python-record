@@ -14,7 +14,7 @@ def flush_to_excel(excel_path, headers, contents):
         os.makedirs(output_dir)
 
     # 创建excel文件和sheet
-    ef = Workbook(excel_name)
+    ef = Workbook(excel_path)
     sheet = ef.add_worksheet("sheet1")
 
    # 写入headers
