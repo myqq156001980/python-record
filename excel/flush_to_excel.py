@@ -1,12 +1,12 @@
 from xlsxwriter.workbook import Workbook
 import os
 
-"""
-excel_path: type->string
-headers: type->list,
-content: type->list[list]
-"""
 def flush_to_excel(excel_path, headers, contents):
+    """
+    excel_path: type->string
+    headers: type->list,
+    content: type->list[list]
+    """
     output_dir, excel_name = os.path.split(excel_path)
     # 检测目标文件夹是否存在，不存在则创建
     if not os.path.exists(output_dir):
