@@ -30,7 +30,7 @@ def request_post():
     # 如果是curl --binary-data 的形式; data中的字段用回车分割
     data = json.dumps(json_1) + "\n" + json.dumps(json_2) + "\n"
     result = requests.post(url, data=data,
-                           headers=header)
+                           headers=headers)
     # 返回的content为byte用str编码为字符串
     str_content = str(result.content, encoding="utf-8")
     return str_content
@@ -44,7 +44,7 @@ def regexp(s):
     pattern = "dashboardId=[0-9]*&"
     res = re.search(pattern, s)
     if res:
-        print(res.group(0)
+        print(res.group(0))
 
 
 def write_excel(dashboard_dic):
